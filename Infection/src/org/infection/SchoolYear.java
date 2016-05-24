@@ -1,5 +1,5 @@
 package org.infection;
 
-public class Classroom {
+public class SchoolYear {
 
 }
