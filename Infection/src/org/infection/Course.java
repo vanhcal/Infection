@@ -1,24 +1,31 @@
 package org.infection;
 
 import java.util.ArrayList;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Course {
 	
-	private final AtomicInteger count = new AtomicInteger(0);
-	private final int courseID;
-	String courseName;
-	ArrayList<Integer> students;
+	private final int courseId;
+	private final String courseName;
+	// We only use a participants list here 
+	// (to represent both the teacher(s) teaching a class and the students enrolled) 
+	// But separate teacher and student lists could be constructed.
+	ArrayList<Integer> participants;
 	
-	public Course(String courseName) {
+	public Course(String courseName, int courseId) {
 		this.courseName = courseName;
-		courseID = count.incrementAndGet(); 
-		students = new ArrayList<>();
+		this.courseId = courseId;
+		participants = new ArrayList<>();
 	}
-	public void addStudent(int student) {
-		students.add(student);
+	public void addParticipant(int participant) {
+		participants.add(participant);
+	}
+	public ArrayList<Integer> getParticipants() {
+		return participants;
 	}
 	public int getCourseId() {
-		return courseID;
+		return courseId;
+	}
+	public String getCourseName() {
+		return courseName;
 	}
 }
