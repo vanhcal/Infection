@@ -3,7 +3,6 @@ package org.infection;
 import org.infection.User.UserType;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runners.JUnit4;
 
 import static org.junit.Assert.*;
 
@@ -124,6 +123,21 @@ public class InfectionTest {
 		assertEquals(userRoster.get(0).getVersion(), 2);
 		assertEquals(userRoster.get(3).getVersion(), 2);
 		assertEquals(userRoster.get(4).getVersion(), 2);
+	}
+	
+	@Test
+	public void infectBy100PercentLimited() {
+		assertEquals(infection.limitedInfectionPercent(userRoster.get(2), 100, userRoster, 2), 5);
+	}
+	
+	@Test
+	public void infectBy0PercentLimited() {
+		assertEquals(infection.limitedInfectionPercent(userRoster.get(2), 0, userRoster, 2), 0);
+	}
+	
+	@Test
+	public void infectBy25PercentLimited() {
+		assertEquals(infection.limitedInfectionPercent(userRoster.get(2), 25, userRoster, 2), 1);
 	}
 	
 	public void addUserToCourse(User user, Course course) {

@@ -4,11 +4,19 @@ import java.util.ArrayList;
 
 public class Course {
 
+	/**
+	 * The Course class contains the course's name, courseID (set in Creator),
+	 * and an ArrayList of all the users (teachers and students) participating
+	 * in the class. If desired, separate lists for teachers and students could
+	 * be constructed.
+	 * 
+	 * Each course also has a website version number. If any participant in the
+	 * course has been infected with a different website version, this course
+	 * version number will reflect that new version.
+	 */
+	
 	private final int courseId;
 	private final String courseName;
-	// We only use a participants list here (to represent both the teacher(s)
-	// teaching a class and the students enrolled). But separate teacher and
-	// student lists could be constructed.
 	ArrayList<User> participants;
 	int version;
 
@@ -34,7 +42,7 @@ public class Course {
 	public String getCourseName() {
 		return courseName;
 	}
-	
+
 	public void setVersion(int nVersion) {
 		version = nVersion;
 	}

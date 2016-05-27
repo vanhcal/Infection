@@ -3,12 +3,23 @@ package org.infection;
 import java.util.ArrayList;
 
 public class User {
-	// TODO: how do we know what the version number is? Do we need to read it in from somewhere?
-	// http://stackoverflow.com/questions/690419/build-and-version-numbering-for-java-projects-ant-cvs-hudson
 
-	// There are inherited "Student" and "Teacher" classes for future methods
-	// where the two need to be further distinguished. But in this program they
-	// are treated similarly, so the two are not further fleshed out.
+	/**
+	 * The User class contains the user's first name, last name, user type (whether
+	 * they are a teacher or student), a userID (which is set in Creator), and
+	 * an ArrayList of the all the courses the user is either enrolled in as a
+	 * student or teaching as a teacher.
+	 * 
+	 * There are inherited "Student" and "Teacher" classes for future methods
+	 * where the two can be further distinguished if necessary. But in this
+	 * program they are treated similarly, so the two are not further fleshed
+	 * out.
+	 * 
+	 * The website version number in the constructor currently starts at 1 for
+	 * all new users. This can be changed via the setVersion method, or via one
+	 * of the Infection methods.
+	 */
+
 	private final int userId;
 	private final String firstName, lastName;
 	private final UserType userType;
