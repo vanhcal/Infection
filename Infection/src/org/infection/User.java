@@ -23,8 +23,8 @@ public class User {
 	private final int userId;
 	private final String firstName, lastName;
 	private final UserType userType;
-	int version;
-	ArrayList<Course> coursesParticipating;
+	private int version;
+	private final ArrayList<Course> coursesParticipating;
 
 	enum UserType {
 		TEACHER, STUDENT;

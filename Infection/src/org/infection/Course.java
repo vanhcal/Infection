@@ -17,8 +17,8 @@ public class Course {
 	
 	private final int courseId;
 	private final String courseName;
-	ArrayList<User> participants;
-	int version;
+	private final ArrayList<User> participants;
+	private int version;
 
 	public Course(String courseName, int courseId) {
 		this.courseName = courseName;
