@@ -11,7 +11,8 @@ public class Infection {
 	 * 
 	 * In "totalInfection", I take a random user as a starting point and infect
 	 * him, all the courses he is taking (or teaching), everyone in each of
-	 * those courses, all the courses those users are taking/teaching, so forth.
+	 * those courses, all the courses those users are taking/teaching, so forth,
+	 * ending when all of that user's connections have been infected.
 	 * 
 	 * In "limitedInfection", I take a random user as a starting point and
 	 * infect him, all the courses he is taking, everyone in each of those
