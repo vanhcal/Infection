@@ -7,17 +7,13 @@ public class User {
 	// http://stackoverflow.com/questions/690419/build-and-version-numbering-for-java-projects-ant-cvs-hudson
 
 	// There are inherited "Student" and "Teacher" classes for future methods
-	// were the two need to be further distinguished. But in this program they
+	// where the two need to be further distinguished. But in this program they
 	// are treated similarly, so the two are not further fleshed out.
 	private final int userId;
 	private final String firstName, lastName;
 	private final UserType userType;
 	int version;
-	// This ArrayList, and the corresponding one in the Course class, is not
-	// used in the infect method. But it's included because otherwise it would
-	// be really hard (slow) to find out which classes a student was taking, or
-	// which students were in a class.
-	ArrayList<Integer> coursesParticipating;
+	ArrayList<Course> coursesParticipating;
 
 	enum UserType {
 		TEACHER, STUDENT;
@@ -44,11 +40,11 @@ public class User {
 		return userId;
 	}
 
-	public void addCourseParticipating(int course) {
+	public void addCourseParticipating(Course course) {
 		coursesParticipating.add(course);
 	}
 
-	public ArrayList<Integer> getCoursesParticipating() {
+	public ArrayList<Course> getCoursesParticipating() {
 		return coursesParticipating;
 	}
 

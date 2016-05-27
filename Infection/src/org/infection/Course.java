@@ -9,19 +9,21 @@ public class Course {
 	// We only use a participants list here (to represent both the teacher(s)
 	// teaching a class and the students enrolled). But separate teacher and
 	// student lists could be constructed.
-	ArrayList<Integer> participants;
+	ArrayList<User> participants;
+	int version;
 
 	public Course(String courseName, int courseId) {
 		this.courseName = courseName;
 		this.courseId = courseId;
 		participants = new ArrayList<>();
+		version = 1;
 	}
 
-	public void addParticipant(int participant) {
+	public void addParticipant(User participant) {
 		participants.add(participant);
 	}
 
-	public ArrayList<Integer> getParticipants() {
+	public ArrayList<User> getParticipants() {
 		return participants;
 	}
 
@@ -31,5 +33,13 @@ public class Course {
 
 	public String getCourseName() {
 		return courseName;
+	}
+	
+	public void setVersion(int nVersion) {
+		version = nVersion;
+	}
+
+	public int getVersion() {
+		return version;
 	}
 }
