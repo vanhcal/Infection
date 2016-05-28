@@ -14,7 +14,7 @@ The Infection class presents three ways which a user may be “infected” by a 
 
 These methods can be called from the “main” class (where all three currently appear but two are commented off). The number “2” in each of these method calls refers to the website number that we are infecting users with. The other numbers in the calls represent the total number of users we want to infect (limitedInfection) or the percentage of users we want to infect (limitedInfectionPercent). (totalInfection automatically infects all of a user’s connections, and so does not need a target infection number in order to run. It does, however, return the total number of people who end up infected.)
 
-The Infection Test class creates mock users, courses, and user-course pairings. It tests:
+The Infection Test class creates test users, courses, and user-course pairings. It tests:
 
 •	Total infection: a generic total infection starting from a random user
 •	Total infection of a user who is not connected to any other user 
